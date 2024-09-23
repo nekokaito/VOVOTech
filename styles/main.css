@@ -116,3 +116,13 @@ button:hover {
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+
+/* Sections */
+.section-titles {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 40px;
+  text-align: center;
+  margin: 30px;
+}
+
+/* Featured  */
