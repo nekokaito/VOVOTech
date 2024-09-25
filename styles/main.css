@@ -124,6 +124,10 @@ button:hover {
   text-align: center;
   margin: 30px;
 }
+.section-div {
+  margin-top: 150px;
+  margin-bottom: 100px;
+}
 
 /* Featured  */
 
@@ -181,4 +185,36 @@ footer p {
 }
 .copyright p {
   margin-top: 50px;
+}
+
+/* 2nd slider */
+.slider {
+  width: 100vw;
+  overflow: hidden;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(250px * 14);
+  animation: scroll 40s linear infinite;
+  gap: 50px;
+}
+
+.slide {
+  min-width: 250px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(
+      calc(-250px * 7)
+    ); /* Total width of one set of slides */
+  }
 }
