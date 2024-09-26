@@ -9,17 +9,23 @@ const cardData = (data) => {
   const cardHead = document.getElementById("card-head");
   const noCardHead = document.getElementById("no-card-head");
 
-  if (Array.isArray(data) && data.length > 0 && data[0]) {
+  if (Array.isArray(data) && data.length > 0) {
     for (const item of data) {
       const card = document.createElement("div");
       card.classList.add("card");
       card.setAttribute("id", `card-${item.id}`);
       card.innerHTML = `
-          <img id="product_image" src="${item.image}" alt="${item.product_name}" class="card-img">
+          <img id="product_image" src="${item.image}" alt="${
+        item.product_name
+      }" class="card-img">
           <div class="card-body">
             <h2 id="product_name" class="card-title">${item.product_name}</h2>
             <p id="product_price" class="card-text">${item.price}৳</p>
-            <button id="add_cart" class="card-button">
+            <button id="add_cart_${
+              item.id
+            }"  onclick="addCart('${encodeURIComponent(
+        JSON.stringify(item)
+      )}')"  class="card-button">
               <i class="fa-solid fa-cart-shopping"></i> Add to Cart
             </button>
           </div>
@@ -28,7 +34,7 @@ const cardData = (data) => {
       cardHead.appendChild(card);
     }
   } else {
-    console.error("Data is not an array:", data);
+    console.error("Data is not an array or is empty:", data);
     const noCard = document.createElement("div");
     noCard.innerHTML = `
     <div>
@@ -37,4 +43,10 @@ const cardData = (data) => {
     `;
     noCardHead.appendChild(noCard);
   }
+};
+
+const addCart = (enItem) => {
+  const item = JSON.parse(decodeURIComponent(enItem));
+  console.log("Item added to cart:", item);
+ 
 };
