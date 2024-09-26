@@ -7,7 +7,7 @@ fetch("/data/data.json")
 
 const cardData = (data) => {
   const cardHead = document.getElementById("card-head");
-  const noCardhead = document.getElementById("no-card-head");
+  const noCardHead = document.getElementById("no-card-head");
 
   if (Array.isArray(data) && data.length > 0 && data[0]) {
     for (const item of data) {
@@ -35,6 +35,6 @@ const cardData = (data) => {
           <h1 class="no-card">No Item Has Been Found.</h1>
         </div>
     `;
-    noCardhead.appendChild(noCard);
+    noCardHead.appendChild(noCard);
   }
 };

@@ -30,7 +30,30 @@ nav {
   top: 0;
   z-index: 10;
 }
+.nav-end {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+.nav-cart {
+  color: white;
+}
+.cart-button {
+  border: none;
+  border-radius: 50%; /* Use 50% for perfect circle */
+  width: 50px; /* Set a fixed width */
+  height: 50px; /* Set a fixed height */
+  display: flex; /* Center the icon */
+  align-items: center; /* Vertically center */
+  justify-content: center; /* Horizontally center */
+  background-color: #8b79d8; /* Optional: background color */
+  cursor: pointer; /* Change cursor on hover */
+}
 
+.cart-button:hover {
+  background-color: #6653ba; /* Optional: hover effect */
+}
 .logo {
   cursor: pointer;
   color: white;
@@ -197,7 +220,7 @@ button:hover {
 .card-title {
   font-family: "Titillium Web", sans-serif;
   font-size: 15px;
-
+  max-width: 200px;
   margin-bottom: 0.5rem;
   font-weight: 400;
 }
@@ -232,6 +255,7 @@ button:hover {
 /* Card Hover Effect */
 .card:hover {
   transform: scale(1.05);
+  box-shadow: 0 4px 6px rgba(174, 94, 255, 0.541);
 }
 
 /* Footer */
