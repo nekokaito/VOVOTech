@@ -9,6 +9,9 @@ const cardData = (data) => {
   const cardHead = document.getElementById("card-head");
   const noCardHead = document.getElementById("no-card-head");
 
+  cardHead.innerHTML = "";
+  noCardHead.innerHTML = "";
+
   if (Array.isArray(data) && data.length > 0) {
     for (const item of data) {
       const card = document.createElement("div");
@@ -21,11 +24,11 @@ const cardData = (data) => {
           <div class="card-body">
             <h2 id="product_name" class="card-title">${item.product_name}</h2>
             <p id="product_price" class="card-text">${item.price}৳</p>
-            <button id="add_cart_${
-              item.id
-            }"  onclick="addCart('${encodeURIComponent(
-        JSON.stringify(item)
-      )}')"  class="card-button">
+            <button id="add_cart_${item.id}" 
+                    onclick="addCart('${encodeURIComponent(
+                      JSON.stringify(item)
+                    )}', this)" 
+                    class="card-button">
               <i class="fa-solid fa-cart-shopping"></i> Add to Cart
             </button>
           </div>
@@ -45,8 +48,19 @@ const cardData = (data) => {
   }
 };
 
-const addCart = (enItem) => {
+const addCart = (enItem, button) => {
   const item = JSON.parse(decodeURIComponent(enItem));
-  console.log("Item added to cart:", item);
- 
+
+  button.classList.remove("card-button");
+  button.classList.add("added-card-button");
+  button.disabled = true;
+
+  const icon = button.querySelector("i");
+  icon.classList.remove("fa-cart-shopping");
+  icon.classList.add("fa-cart-arrow-down");
+
+  button.innerHTML = `<i class="fa-solid fa-cart-arrow-down"></i> Added to Cart`;
+
+  button.style.opacity = "0.5";
+  button.style.cursor = "not-allowed";
 };

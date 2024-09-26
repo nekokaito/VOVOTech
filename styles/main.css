@@ -250,6 +250,20 @@ button:hover {
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 }
+.added-card-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #717171;
+  color: #ffffff;
+  text-align: center;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: no-drop;
+  transition: background-color 0.2s ease-in-out;
+}
+.added-card-button:hover {
+  background-color: #929191f1;
+}
 
 .card-button:hover {
   background-color: #9e93d1;
@@ -260,6 +274,7 @@ button:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 6px rgba(174, 94, 255, 0.541);
 }
+
 
 /* Footer */
 footer {
