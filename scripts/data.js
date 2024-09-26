@@ -7,16 +7,18 @@ fetch("/data/data.json")
 
 const cardData = (data) => {
   const cardHead = document.getElementById("card-head");
+  const noCardhead = document.getElementById("no-card-head");
 
   if (Array.isArray(data)) {
     for (const item of data) {
       const card = document.createElement("div");
       card.classList.add("card");
+      card.setAttribute("id", `card-${item.id}`);
       card.innerHTML = `
-          <img src="${item.image}" alt="${item.product_name}" class="card-img">
+          <img id="product_image" src="${item.image}" alt="${item.product_name}" class="card-img">
           <div class="card-body">
-            <h2 class="card-title">${item.product_name}</h2>
-            <p class="card-text">${item.price}৳</p>
+            <h2 id="product_name" class="card-title">${item.product_name}</h2>
+            <p id="product_price" class="card-text">${item.price}৳</p>
             <button id="add_cart" class="card-button">
               <i class="fa-solid fa-cart-shopping"></i> Add to Cart
             </button>
@@ -27,5 +29,12 @@ const cardData = (data) => {
     }
   } else {
     console.error("Data is not an array:", data);
+    const noCard = document.createElement("div");
+    noCard.innerHTML = `
+    <div>
+          <h1 class="no-card">No Item Has Been Found.</h1>
+        </div>
+    `;
+    noCardhead.appendChild(card);
   }
 };

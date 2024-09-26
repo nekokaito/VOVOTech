@@ -16,5 +16,23 @@
     "image": "https://www.startech.com.bd/image/cache/catalog/game-pad/razer/kishi-v2-iphone/kishi-v2-iphone-01-200x200.webp",
     "product_name": "Razer Kishi V2 Mobile Gaming Controller for iPhone (Global)",
     "price": 10999
+  },
+  {
+    "id": 4,
+    "image": "https://www.startech.com.bd/image/cache/catalog/processor/amd/5600x/5600x-001-228x228.jpg",
+    "product_name": "AMD Ryzen 5 5600 Processor",
+    "price": 13000
+  },
+  {
+    "id": 5,
+    "image": "https://www.startech.com.bd/image/cache/catalog/mouse/razer/viper-mini/viper-mini-01-228x228.jpg",
+    "product_name": "Razer Viper Mini Ultra-Lightweight",
+    "price": 3500
+  },
+  {
+    "id": 6,
+    "image": "https://www.startech.com.bd/image/cache/catalog/monitor/acer/sa222qe/sa222qe-white-01-228x228.webp",
+    "product_name": "Acer SA222Q Ultra Slim 21.5 100Hz IPS FHD Monitor",
+    "price": 10300
   }
 ]
