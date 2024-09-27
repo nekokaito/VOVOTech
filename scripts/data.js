@@ -1,3 +1,5 @@
+// Main Data Fetching from Back-End
+
 fetch("/data/data.json") // PHP data will be fetch from here <-------- Kaitoooooo >w<
   .then((response) => response.json())
   .then((data) => {
@@ -5,6 +7,7 @@ fetch("/data/data.json") // PHP data will be fetch from here <-------- Kaitooooo
   })
   .catch((error) => console.error("Error fetching data:", error));
 
+// Card Data for Every Products
 const cardData = (data) => {
   const cardHead = document.getElementById("card-head");
   const noCardHead = document.getElementById("no-card-head");
@@ -48,6 +51,8 @@ const cardData = (data) => {
   }
 };
 
+// Add Card Button Functions
+
 const addCart = (enItem, button) => {
   const item = JSON.parse(decodeURIComponent(enItem));
 
@@ -68,9 +73,7 @@ const addCart = (enItem, button) => {
   cartData([item]);
 };
 
-
-
-
+// Shopping Cart Data For Every Products
 const cartData = (data) => {
   const tableBody = document.getElementById("table-inside");
   if (Array.isArray(data) && data.length > 0) {
@@ -81,13 +84,13 @@ const cartData = (data) => {
      <td>${item.product_name}</td>
                 <td>${item.model}</td>
                 <td>
-                  <input class="update" type="number" value="1" />
-                  <button onclick="">
-                    <i class="fa-solid fa-arrows-rotate"></i>
-                  </button>
-                </td>
-                <td>${item.price}</td>
-                <td>5000</td>
+  <input class="update" type="number" value="1" min="1" id="quantity-${item.id}" />
+  <button onclick="calculateTotal('${item.id}', this)">
+    <i class="fa-solid fa-arrows-rotate"></i>
+  </button>
+</td>
+<td id="unit-${item.id}">${item.price}৳</td>
+<td class="total-price" id="total-price-${item.id}">${item.price}৳</td>
 
 `;
       tableBody.appendChild(body);
@@ -95,4 +98,43 @@ const cartData = (data) => {
   } else {
     console.error("Data is not an array or is empty:", data);
   }
+};
+
+// Calculation Logic Function 
+
+const calculateTotal = (itemId, button) => {
+
+  const quantityInput = document.getElementById(`quantity-${itemId}`);
+  const quantity = parseInt(quantityInput.value) || 0;
+
+
+  const unitPriceElement = document.getElementById(`unit-${itemId}`);
+  const unitPrice = parseFloat(
+    unitPriceElement.innerText.replace("৳", "").trim()
+  );
+
+ 
+  const totalPrice = quantity * unitPrice;
+
+
+  const totalPriceElement = document.getElementById(`total-price-${itemId}`);
+  totalPriceElement.innerText = `${totalPrice}৳`;
+
+  
+  updateGrandTotal();
+};
+
+const updateGrandTotal = () => {
+  let grandTotal = 0;
+
+ 
+  const totalPriceElements = document.querySelectorAll(".total-price");
+  totalPriceElements.forEach((element) => {
+    const price = parseFloat(element.innerText.replace("৳", "").trim()) || 0;
+    grandTotal += price;
+  });
+
+  
+  const grandTotalElement = document.getElementById("grand-total");
+  grandTotalElement.innerText = `${grandTotal}৳`;
 };

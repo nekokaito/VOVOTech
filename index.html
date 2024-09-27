@@ -19,7 +19,7 @@
         </ul>
       </div>
       <div class="nav-end">
-       <a href="./pages/cart.html"><div class="cart-button"><i  class="fa-solid nav-cart fa-cart-shopping"></i></div></a> 
+       <a onclick="openModal()"><div class="cart-button"><i  class="fa-solid nav-cart fa-cart-shopping"></i></div></a> 
         <div>
 <!-- <a href=""><button id="login-btn" onclick="">Login</button></a></div> -->
         </div>
@@ -71,10 +71,17 @@
 
 
   <!-- Product Cart -->
-      <section class="cart-section">
-        <h1></h1>
+      <!-- Modal Structure -->
+<div class="modal" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title" id="cartModalLabel">Shopping Cart</h1>
+      
+      </div>
+      <div class="modal-body">
         <div class="container">
-          <table class="table">
+          <table class="table titillium-font">
             <!-- head -->
             <thead>
               <tr>
@@ -91,15 +98,21 @@
             </tbody>
           </table>
           <div class="table-price-div">
-            <p class="table-price">Total: <span id="total-price">6666</span></p>
+            <p class="table-price">Total: <span id="grand-total">0৳</span></p>
           </div>
-
-          <p class="table-text">
+          <p class="table-text hidden">
             No Table Item Has Been Added
             <i class="fa-solid fa-cart-shopping"></i>
           </p>
         </div>
-      </section>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" onclick="exitModal()" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Checkout</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 

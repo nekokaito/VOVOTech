@@ -16,16 +16,19 @@
   text-align: center;
   margin: 30px;
 }
+
 .table-price {
   font-family: "Titillium Web", sans-serif;
   font-size: 20px;
   text-align: right;
   margin: 30px;
 }
+
 .table-price-div {
   margin-right: 20px;
 }
-#total-price {
+
+#grand-total {
   color: #8b79d8;
   font-style: bold;
   font-weight: 600;
@@ -35,6 +38,7 @@
   width: 100%;
   overflow-x: hidden;
 }
+
 .update {
   font-family: "Titillium Web", sans-serif;
   padding: 9px 25px;
@@ -67,10 +71,53 @@
 .table tbody tr:hover {
   background-color: rgba(229, 231, 235, 1);
 }
+
 .table-auto {
   table-layout: auto;
 }
 
 .table-fixed {
   table-layout: fixed;
+}
+
+/* Modal */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1050; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0, 0, 0, 0.5); 
+  opacity: 0; 
+  transform: translateY(-20px); 
+  transition: opacity 0.3s ease, transform 0.3s ease; 
+}
+
+
+.modal.show {
+  display: block; 
+  opacity: 1; 
+  transform: translateY(0); 
+}
+
+.modal-title {
+  font-family: "Titillium Web", sans-serif;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+
+.modal-dialog {
+  margin: 30px auto;
+  max-width: 80%; 
+}
+
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 20px;
 }

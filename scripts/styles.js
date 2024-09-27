@@ -18,3 +18,25 @@ const nextSlide = () => {
 const prevSlide = () => {
   showSlide(--currentSlide);
 };
+
+
+const modal = document.getElementById("cartModal");
+
+// Function to open the modal
+const openModal = () => {
+  modal.classList.add("show");
+  updateGrandTotal(); 
+};
+
+
+const closeModal = (event) => {
+  if (event.target === modal) {
+    modal.classList.remove("show");
+  }
+};
+
+const exitModal = () => {
+  modal.classList.remove("show");
+};
+
+window.addEventListener("click", closeModal);
