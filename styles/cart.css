@@ -1,0 +1,47 @@
+/* Cart Section */
+
+.cart-section {
+  margin: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+/* Table */
+
+.container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid rgba(229, 231, 235, 1); /* Light gray */
+}
+
+.table th {
+  font-weight: 600;
+  background-color: rgba(243, 244, 246, 1);
+}
+
+.table-zebra tbody tr:nth-child(odd) {
+  background-color: rgba(243, 244, 246, 1);
+}
+
+.table tbody tr:hover {
+  background-color: rgba(229, 231, 235, 1);
+}
+.table-auto {
+  table-layout: auto;
+}
+
+.table-fixed {
+  table-layout: fixed;
+}
