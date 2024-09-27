@@ -1,4 +1,4 @@
-fetch("/data/data.json")
+fetch("/data/data.json") // PHP data will be fetch from here <-------- Kaitoooooo
   .then((response) => response.json())
   .then((data) => {
     cardData(data);
@@ -63,4 +63,6 @@ const addCart = (enItem, button) => {
 
   button.style.opacity = "0.5";
   button.style.cursor = "not-allowed";
+
+  console.log(item.product_name);
 };
