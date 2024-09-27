@@ -57,7 +57,7 @@ const addCart = (enItem, button) => {
   const item = JSON.parse(decodeURIComponent(enItem));
 
   const textCount = document.getElementById("cart-count-text");
-  const currentCount = parseInt(textCount.innerText) || 0; // Get the current count, default to 0 if NaN
+  const currentCount = parseInt(textCount.innerText) || 0; 
   const newCount = currentCount + 1;
   textCount.innerText = newCount;
   button.classList.remove("card-button");
