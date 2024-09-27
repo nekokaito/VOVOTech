@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/main.css" />
-    <link rel="icon" href="images/logo/vovo.png"/>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="icon" href="./images/logo/vovo.png"/>
+    <link rel="stylesheet" href="./styles/cart.css">
     <title>VOVO Tech</title>
   </head>
   <body>
@@ -12,13 +13,13 @@
       <h1 class="logo">V O V O</h1>
       <div>
         <ul class="navbar_links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Add</a></li>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="">Add</a></li>
           <li><a href="#">About</a></li>
         </ul>
       </div>
       <div class="nav-end">
-        <div class="cart-button"><i  class="fa-solid nav-cart fa-cart-shopping"></i></div>
+       <a href="./pages/cart.html"><div class="cart-button"><i  class="fa-solid nav-cart fa-cart-shopping"></i></div></a> 
         <div>
 <!-- <a href=""><button id="login-btn" onclick="">Login</button></a></div> -->
         </div>
@@ -67,6 +68,44 @@
       </div>
       
      </section>
+
+
+  <!-- Product Cart -->
+      <section class="cart-section">
+        <h1></h1>
+        <div class="container">
+          <table class="table">
+            <!-- head -->
+            <thead>
+              <tr>
+                <th>Product Name</th>
+                <th>Product Model</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody id="table-inside" class="table-body">
+              <!-- row 1 -->
+              
+            </tbody>
+          </table>
+          <div class="table-price-div">
+            <p class="table-price">Total: <span id="total-price">6666</span></p>
+          </div>
+
+          <p class="table-text">
+            No Table Item Has Been Added
+            <i class="fa-solid fa-cart-shopping"></i>
+          </p>
+        </div>
+      </section>
+
+
+
+
+
+
       
 <!-- Our Trusted Partners -->
       <section class="section-div">
@@ -137,8 +176,9 @@
       <p>2024, All Rights Reserved.</p>
     </div>
     </footer>
-     <script src="scripts/styles.js"></script>
-     <script src="scripts/data.js"></script>
+     <script src="./scripts/styles.js"></script>
+     <script src="./scripts/data.js"></script>
+     
      <script src="https://kit.fontawesome.com/ef66a13064.js" crossorigin="anonymous"></script>
   </body>
 </html>

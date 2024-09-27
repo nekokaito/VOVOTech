@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+
 /* Cart Section */
 
 .cart-section {
@@ -8,9 +10,36 @@
 
 /* Table */
 
+.table-text {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 40px;
+  text-align: center;
+  margin: 30px;
+}
+.table-price {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 20px;
+  text-align: right;
+  margin: 30px;
+}
+.table-price-div {
+  margin-right: 20px;
+}
+#total-price {
+  color: #8b79d8;
+  font-style: bold;
+  font-weight: 600;
+}
+
 .container {
   width: 100%;
   overflow-x: hidden;
+}
+.update {
+  font-family: "Titillium Web", sans-serif;
+  padding: 9px 25px;
+  border: 1px solid rgba(171, 171, 171, 0.66);
+  border-radius: 20px;
 }
 
 .table {

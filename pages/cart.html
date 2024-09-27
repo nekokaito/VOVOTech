@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/main.css" />
-    <link rel="stylesheet" href="/styles/cart.css" />
-    <link rel="icon" href="/images/logo/vovo.png" />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/cart.css" />
+    <link rel="icon" href="../images/logo/vovo.png" />
     <title>VOVO Tech</title>
   </head>
   <body>
@@ -13,8 +13,8 @@
       <h1 class="logo">V O V O</h1>
       <div>
         <ul class="navbar_links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Add</a></li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="">Add</a></li>
           <li><a href="#">About</a></li>
         </ul>
       </div>
@@ -30,7 +30,7 @@
     </nav>
 
     <main>
-      <!-- Product Cart -->
+    <!-- Product Cart -->
       <section class="cart-section">
         <h1></h1>
         <div class="container">
@@ -39,35 +39,36 @@
             <thead>
               <tr>
                 <th>Product Name</th>
-                <th>Product Model</th>
+                <th>Product   Model</th>
                 <th>Quantity</th>
                 <th>Unit Price</th>
                 <th>Total</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="table-inside" class="table-body">
               <!-- row 1 -->
               <tr>
                 <td>Cy Ganderton</td>
                 <td>MD</td>
-                <td><input type="number" value="1" /> <button></button></td>
+                <td>
+                  <input class="update" type="number" value="1" />
+                  <button onclick="">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                  </button>
+                </td>
                 <td>Blue</td>
                 <td>5000</td>
               </tr>
-              <!-- row 2 -->
-              <tr>
-                <td>Hart Hagerty</td>
-                <td>Desktop Support Technician</td>
-                <td>Purple</td>
-              </tr>
-              <!-- row 3 -->
-              <tr>
-                <td>Brice Swyre</td>
-                <td>Tax Accountant</td>
-                <td>Red</td>
-              </tr>
             </tbody>
           </table>
+          <div class="table-price-div">
+            <p class="table-price">Total: <span id="total-price">6666</span></p>
+          </div>
+
+          <p class="table-text">
+            No Table Item Has Been Added
+            <i class="fa-solid fa-cart-shopping"></i>
+          </p>
         </div>
       </section>
 
@@ -132,8 +133,9 @@
         <p>2024, All Rights Reserved.</p>
       </div>
     </footer>
-    <script src="scripts/styles.js"></script>
-    <script src="scripts/data.js"></script>
+    <script src="../scripts/styles.js"></script>
+    <script src="../scripts/data.js"></script>
+
     <script
       src="https://kit.fontawesome.com/ef66a13064.js"
       crossorigin="anonymous"

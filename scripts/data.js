@@ -1,4 +1,4 @@
-fetch("/data/data.json") // PHP data will be fetch from here <-------- Kaitoooooo
+fetch("/data/data.json") // PHP data will be fetch from here <-------- Kaitoooooo >w<
   .then((response) => response.json())
   .then((data) => {
     cardData(data);
@@ -65,4 +65,34 @@ const addCart = (enItem, button) => {
   button.style.cursor = "not-allowed";
 
   console.log(item.product_name);
+  cartData([item]);
+};
+
+
+
+
+const cartData = (data) => {
+  const tableBody = document.getElementById("table-inside");
+  if (Array.isArray(data) && data.length > 0) {
+    for (const item of data) {
+      const body = document.createElement("tr");
+
+      body.innerHTML = `
+     <td>${item.product_name}</td>
+                <td>${item.model}</td>
+                <td>
+                  <input class="update" type="number" value="1" />
+                  <button onclick="">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                  </button>
+                </td>
+                <td>${item.price}</td>
+                <td>5000</td>
+
+`;
+      tableBody.appendChild(body);
+    }
+  } else {
+    console.error("Data is not an array or is empty:", data);
+  }
 };
