@@ -56,6 +56,10 @@ const cardData = (data) => {
 const addCart = (enItem, button) => {
   const item = JSON.parse(decodeURIComponent(enItem));
 
+  const textCount = document.getElementById("cart-count-text");
+  const currentCount = parseInt(textCount.innerText) || 0; // Get the current count, default to 0 if NaN
+  const newCount = currentCount + 1;
+  textCount.innerText = newCount;
   button.classList.remove("card-button");
   button.classList.add("added-card-button");
   button.disabled = true;
@@ -69,7 +73,10 @@ const addCart = (enItem, button) => {
   button.style.opacity = "0.5";
   button.style.cursor = "not-allowed";
 
-  console.log(item.product_name);
+  const countText = document.getElementById("cart-count-span");
+  countText.classList.remove("hidden");
+  countText.classList.add("flex");
+
   cartData([item]);
 };
 
@@ -100,41 +107,34 @@ const cartData = (data) => {
   }
 };
 
-// Calculation Logic Function 
+// Calculation Logic Function
 
 const calculateTotal = (itemId, button) => {
-
   const quantityInput = document.getElementById(`quantity-${itemId}`);
   const quantity = parseInt(quantityInput.value) || 0;
-
 
   const unitPriceElement = document.getElementById(`unit-${itemId}`);
   const unitPrice = parseFloat(
     unitPriceElement.innerText.replace("৳", "").trim()
   );
 
- 
   const totalPrice = quantity * unitPrice;
-
 
   const totalPriceElement = document.getElementById(`total-price-${itemId}`);
   totalPriceElement.innerText = `${totalPrice}৳`;
 
-  
   updateGrandTotal();
 };
 
 const updateGrandTotal = () => {
   let grandTotal = 0;
 
- 
   const totalPriceElements = document.querySelectorAll(".total-price");
   totalPriceElements.forEach((element) => {
     const price = parseFloat(element.innerText.replace("৳", "").trim()) || 0;
     grandTotal += price;
   });
 
-  
   const grandTotalElement = document.getElementById("grand-total");
   grandTotalElement.innerText = `${grandTotal}৳`;
 };
