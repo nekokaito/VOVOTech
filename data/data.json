@@ -47,5 +47,26 @@
     "product_name": "Lenovo Legion Slim 5 16AHP9 Ryzen 7 8845HS AI Integrated RTX 4070 8GB Graphics 16",
     "price": 245000,
     "model": "Legion Slim 5 16AHP9"
+  },
+  {
+    "id": 8,
+    "image": "https://www.startech.com.bd/image/cache/catalog/graphics-card/msi/rtx-3060-ventus-2x/rtx-3060-ventus-2x-01-228x228.jpg",
+    "product_name": "MSI GeForce RTX 3060 VENTUS 2X 12GB GDDR6 Graphics Card",
+    "price": 45000,
+    "model": "GeForce RTX 3060 VENTUS 2X 12G"
+  },
+  {
+    "id": 9,
+    "image": "https://www.startech.com.bd/image/cache/catalog/graphics-card/pny/geforce-rtx-4080-16gb-xlr8-verto-tf/geforce-rtx-4080-16gb-xlr8-verto-tf-01-228x228.webp",
+    "product_name": "PNY GeForce RTX 4080 16GB XLR8 Gaming Verto",
+    "price": 109900,
+    "model": "GeForce RTX 4080 16GB"
+  },
+  {
+    "id": 10,
+    "image": "https://www.startech.com.bd/image/cache/catalog/graphics-card/sapphire/rx-6600/rx-6600-01-228x228.webp",
+    "product_name": "Sapphire Pulse AMD Radeon RX 6600 8GB GDDR6 Graphics Card",
+    "price": 28000,
+    "model": "Pulse AMD Radeon RX 6600"
   }
 ]
