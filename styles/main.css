@@ -6,6 +6,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  
+}
+
+html {
+  scroll-behavior: smooth;
 }
 .hidden {
   display: none;
@@ -138,6 +143,10 @@ button:hover {
 }
 
 /* Slider */
+
+header {
+  overflow-x: hidden;
+}
 
 .carousel {
   position: relative;
@@ -349,19 +358,19 @@ footer p {
   margin-top: 32px;
 }
 .social-media .odd > i {
-  font-size: 34px;
+  font-size: 25px;
   color: #ffffff;
 }
 .social-media .odd > i:hover {
-  font-size: 34px;
+  font-size: 25px;
   color: #747474;
 }
 .social-media .even > i {
-  font-size: 34px;
+  font-size: 25px;
   color: #a982d5;
 }
 .social-media .even > i:hover {
-  font-size: 34px;
+  font-size: 25px;
   color: #c1a7df;
 }
 
@@ -392,6 +401,9 @@ footer p {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.section-div {
+  overflow-x: hidden;
 }
 
 @keyframes scroll {

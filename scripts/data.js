@@ -57,7 +57,7 @@ const addCart = (enItem, button) => {
   const item = JSON.parse(decodeURIComponent(enItem));
 
   const textCount = document.getElementById("cart-count-text");
-  const currentCount = parseInt(textCount.innerText) || 0; 
+  const currentCount = parseInt(textCount.innerText) || 0;
   const newCount = currentCount + 1;
   textCount.innerText = newCount;
   button.classList.remove("card-button");
@@ -83,7 +83,15 @@ const addCart = (enItem, button) => {
 // Shopping Cart Data For Every Products
 const cartData = (data) => {
   const tableBody = document.getElementById("table-inside");
+  const tableParent = document.getElementById("cart-table");
+  const tablePrice = document.getElementById("table-price");
+  const noCartFound = document.getElementById("no-cart-found");
+  const checkoutButton = document.getElementById("checkout-btn");
   if (Array.isArray(data) && data.length > 0) {
+    tableParent.classList.remove("hidden");
+    tablePrice.classList.remove("hidden");
+    noCartFound.classList.add("hidden");
+    checkoutButton.classList.remove("hidden");
     for (const item of data) {
       const body = document.createElement("tr");
 

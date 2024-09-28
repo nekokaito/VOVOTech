@@ -13,7 +13,7 @@
       <h1 class="logo">V O V O</h1>
       <div>
         <ul class="navbar_links">
-          <li><a href="./index.html">Home</a></li>
+          <li><a href="#home">Home</a></li>
           <li><a href="#product">Products</a></li>
           <li><a href="#">About</a></li>
         </ul>
@@ -34,7 +34,7 @@
       
     </nav>
 
-    <header class="header-main">
+    <header id="home" class="header-main">
       
        <div class="carousel"></div>
     <div class="carousel-inner">
@@ -88,7 +88,7 @@
       </div>
       <div class="modal-body">
         <div class="container">
-          <table class="table titillium-font">
+          <table id="cart-table" class="table hidden titillium-font">
             <!-- head -->
             <thead>
               <tr>
@@ -105,17 +105,17 @@
             </tbody>
           </table>
           <div class="table-price-div">
-            <p class="table-price">Total: <span id="grand-total">0৳</span></p>
+            <p id="table-price" class="table-price hidden">Total: <span id="grand-total">0৳</span></p>
           </div>
-          <p class="table-text hidden">
-            No Table Item Has Been Added
+          <p id="no-cart-found" class="table-text">
+            No Item Has Been Added
             <i class="fa-solid fa-cart-shopping"></i>
           </p>
         </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" onclick="exitModal()" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Checkout</button>
+        <button id="checkout-btn" type="button" class="btn btn-primary hidden">Checkout</button>
       </div>
     </div>
   </div>
