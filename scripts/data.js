@@ -76,7 +76,7 @@ const addCart = (enItem, button) => {
   const countText = document.getElementById("cart-count-span");
   countText.classList.remove("hidden");
   countText.classList.add("flex");
-
+  launchToast();
   cartData([item]);
 };
 

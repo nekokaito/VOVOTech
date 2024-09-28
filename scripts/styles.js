@@ -63,3 +63,11 @@ const exitCheckoutModal = () => {
 };
 
 window.addEventListener("click", closeCheckoutModal);
+
+const launchToast = () => {
+  const x = document.getElementById("toast");
+  x.className = "show";
+  setTimeout(() => {
+    x.className = x.className.replace("show", "");
+  }, 5000);
+};
