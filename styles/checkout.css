@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+
+.order-form {
+  background-color: #ffffff; /* White background for the form */
+  border-radius: 12px; /* More rounded corners */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+  padding: 30px; /* Increased padding for the form */
+  width: 350px; /* Adjusted width for better spacing */
+  transition: transform 0.3s; /* Smooth transition on hover */
+}
+
+.order-form:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.form-title {
+  text-align: center;
+  color: #2b2b2b; /* Darker title color */
+  margin-bottom: 25px; /* More space below title */
+  font-size: 1.5rem; /* Larger title font size */
+}
+
+.form-group {
+  margin-bottom: 20px; /* More space between form groups */
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px; /* Increased space below labels */
+  font-weight: 600; /* Bolder labels for emphasis */
+  color: #4a4a4a; /* Slightly darker color for labels */
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px; /* Increased padding for inputs */
+  border: 2px solid #d1d5db; /* Light border for inputs */
+  border-radius: 8px; /* Rounded corners for inputs */
+  font-size: 14px;
+  transition: border-color 0.3s; /* Smooth border color transition */
+}
+
+.form-input:focus {
+  border-color: #3b82f6; /* Border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-label {
+  margin-bottom: 10px; /* More space between radio buttons */
+  color: #4a4a4a; /* Consistent label color */
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px; /* Increased padding for button */
+  background-color: #3b82f6; /* Primary color for button */
+  color: #ffffff; /* White text for contrast */
+  border: none; /* No border */
+  border-radius: 8px; /* Rounded corners for button */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.submit-button:hover {
+  background-color: #2563eb; /* Darker shade on hover */
+}

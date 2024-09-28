@@ -19,14 +19,12 @@
         </ul>
       </div>
       <div class="nav-end">
-       <a onclick="openModal()">
-
-        <div class="cart-button">
-        <i class="fa-solid nav-cart fa-cart-shopping"></i>
-        <span id="cart-count-span" class="cart-count hidden"><p id="cart-count-text">0</p></span>
-    </div>
-
-       </a> 
+       <a onclick="openCartModal()">
+  <div class="cart-button">
+    <i class="fa-solid nav-cart fa-cart-shopping"></i>
+    <span id="cart-count-span" class="cart-count hidden"><p id="cart-count-text">0</p></span>
+  </div>
+</a>
         <div>
 <!-- <a href=""><button id="login-btn" onclick="">Login</button></a></div> -->
         </div>
@@ -115,12 +113,68 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" onclick="exitModal()" data-bs-dismiss="modal">Close</button>
-        <button id="checkout-btn" type="button" class="btn btn-primary hidden">Checkout</button>
+        <button onclick="openCheckoutModal()" id="checkout-btn" type="button" class="btn btn-primary hidden">Checkout</button>
       </div>
     </div>
   </div>
 </div>
 
+
+<!-- checkout modal -->
+
+<div id="checkout-modal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Customer Information</h2>
+        <form onsubmit="checkoutDetails(event)" class="order-form">
+    <h2 class="form-title">Order Form</h2>
+
+    <div class="form-group">
+        <label for="firstName" class="form-label">First Name</label>
+        <input type="text" id="firstName" name="firstName" class="form-input" required>
+    </div>
+
+    <div class="form-group">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input type="text" id="lastName" name="lastName" class="form-input" required>
+    </div>
+
+    <div class="form-group">
+        <label for="contactNumber" class="form-label">Contact Number</label>
+        <input type="tel" id="contactNumber" name="contactNumber" class="form-input" required>
+    </div>
+
+    <div class="form-group">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" id="email" name="email" class="form-input" required>
+    </div>
+
+    <div class="form-group">
+        <label for="city" class="form-label">City</label>
+        <input type="text" id="city" name="city" class="form-input" required>
+    </div>
+
+    <div class="form-group">
+        <label for="state" class="form-label">State</label>
+        <input type="text" id="state" name="state" class="form-input" required>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label">Payment Method</label>
+        <div class="radio-group">
+            <label class="radio-label"><input type="radio" name="paymentMethod" value="cod" required> Cash on Delivery</label>
+            <label class="radio-label"><input type="radio" name="paymentMethod" value="online" required> Online Payment</label>
+        </div>
+    </div>
+
+    <button type="submit" class="submit-button">Confirm Order</button>
+</form>
+
+    </div>
+
+</div>
 
 
 
@@ -198,6 +252,7 @@
     </footer>
      <script src="./scripts/styles.js"></script>
      <script src="./scripts/data.js"></script>
+     <script src="./scripts/checkout.js"></script>
      
      <script src="https://kit.fontawesome.com/ef66a13064.js" crossorigin="anonymous"></script>
   </body>
