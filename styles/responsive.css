@@ -1,0 +1,121 @@
+/* Responsive for laptops (1024px and below) */
+@media (max-width: 1024px) {
+  nav {
+    padding: 20px 4%;
+  }
+
+  .navbar_links {
+    margin-top: 10px;
+  }
+
+  .navbar_links li {
+    padding: 0 10px;
+  }
+
+  .cart-button {
+    width: 45px;
+    height: 45px;
+  }
+
+  .carousel {
+    max-width: 100%;
+  }
+
+  .card-div {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 95%;
+  }
+
+  .card {
+    max-width: 90%;
+  }
+
+  footer p {
+    padding: 0 30px;
+  }
+}
+
+/* Responsive for tablets (768px and below) */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    padding: 20px 5%;
+  }
+
+  .navbar_links {
+    margin-top: 10px;
+  }
+
+  .navbar_links li {
+    padding: 0 10px;
+  }
+
+  .cart-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carousel {
+    max-width: 100%;
+  }
+
+  .card-div {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 90%;
+  }
+
+  .card {
+    max-width: 250px;
+  }
+
+  footer p {
+    padding: 0 50px;
+  }
+}
+
+/* Responsive for phones (480px and below) */
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;
+    padding: 15px 3%;
+  }
+
+  .navbar_links li {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .cart-button {
+    width: 35px;
+    height: 35px;
+  }
+
+  .carousel {
+    max-width: 100%;
+  }
+
+  .section-titles {
+    font-size: 30px;
+  }
+
+  .section-p {
+    font-size: 13px;
+  }
+
+  .card-div {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  footer p {
+    padding: 0 20px;
+  }
+}
