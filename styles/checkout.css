@@ -1,27 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
 
+#checkout-modal {
+  width: 100%;
+  height: auto;
+}
+
+.checkout-form {
+  display: flex;
+  justify-content: center;
+}
 .order-form {
-  background-color: #ffffff; /* White background for the form */
-  border-radius: 12px; /* More rounded corners */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
-  padding: 30px; /* Increased padding for the form */
-  width: 350px; /* Adjusted width for better spacing */
-  transition: transform 0.3s; /* Smooth transition on hover */
+  font-family: "Titillium Web", sans-serif;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 40%;
+  height: auto;
+  transition: transform 0.3s;
 }
 
 .order-form:hover {
-  transform: translateY(-5px); /* Slight lift on hover */
+  transform: translateY(-5px);
 }
 
 .form-title {
   text-align: center;
-  color: #2b2b2b; /* Darker title color */
-  margin-bottom: 25px; /* More space below title */
-  font-size: 1.5rem; /* Larger title font size */
+  color: #2b2b2b;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
 }
 
 .form-group {
-  margin-bottom: 20px; /* More space between form groups */
+  margin-bottom: 20px;
 }
 
 .form-label {
@@ -41,7 +52,7 @@
 }
 
 .form-input:focus {
-  border-color: #3b82f6; /* Border color on focus */
+  border-color: #d2afed; /* Border color on focus */
   outline: none; /* Remove default outline */
 }
 
@@ -57,16 +68,19 @@
 
 .submit-button {
   width: 100%;
-  padding: 12px; /* Increased padding for button */
-  background-color: #3b82f6; /* Primary color for button */
-  color: #ffffff; /* White text for contrast */
-  border: none; /* No border */
-  border-radius: 8px; /* Rounded corners for button */
+  padding: 12px;
+  background-color: #8b84a9;
+  color: #ffffff;
+  border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s; /* Smooth background color transition */
+  transition: background-color 0.3s;
 }
 
 .submit-button:hover {
-  background-color: #2563eb; /* Darker shade on hover */
+  background-color: #8b84a9;
+}
+.submission {
+  display: flex;
+  gap: 20px;
 }

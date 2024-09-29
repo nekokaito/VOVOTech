@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./styles/cart.css">
     <link rel="stylesheet" href="./styles/responsive.css">
     <link rel="stylesheet" href="./styles/toast.css">
+    <link rel="stylesheet" href="./styles/checkout.css">
     <title>VOVO Tech</title>
   </head>
   <body>
@@ -127,11 +128,13 @@
 <div id="checkout-modal" class="modal">
 
     <!-- Modal content -->
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Customer Information</h2>
-        <form onsubmit="checkoutDetails(event)" class="order-form">
-    <h2 class="form-title">Order Form</h2>
+    <div id="checkout-modal-parent" class="modal-content">
+        <div>
+        <h2 class="section-titles">Customer Information</h2>
+        </div>
+      <div class="checkout-form">
+<form onsubmit="checkoutDetails(event)" class="order-form">
+    
 
     <div class="form-group">
         <label for="firstName" class="form-label">First Name</label>
@@ -170,9 +173,14 @@
             <label class="radio-label"><input type="radio" name="paymentMethod" value="online" required> Online Payment</label>
         </div>
     </div>
-
+    <div class="submission">
+    <button onclick="exitCheckoutModal()" class="submit-button">Exit</button>
     <button type="submit" class="submit-button">Confirm Order</button>
+    </div>
+   
 </form>
+            </div>
+        
 
     </div>
 
@@ -234,13 +242,23 @@
       </section>
 
      </main>
-  <div id="toast">
-    <div id="img">
-        <img src="./images/logo/confirm.gif" alt="Notification Animation" id="toast-image">
-        
+
+     <!-- Notification Toasts -->
+<div id="toast" class="toast">
+    <div id="img" class="img">
+        <img src="./images/logo/confirm.gif" alt="Notification Animation">
     </div>
-    <div id="desc">Product Has been added.</div>
+    <div id="desc" class="desc">Product Has been added.</div>
 </div>
+
+<div id="toast-done" class="toast">
+    <div id="img" class="img">
+        <img src="./images/logo/confirm.gif" alt="Notification Animation">
+    </div>
+    <div id="desc" class="desc">Order Has Been Placed.</div>
+</div>
+
+
     <footer>
       <div class="icon-div">
         

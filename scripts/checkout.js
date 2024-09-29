@@ -50,22 +50,23 @@ const checkoutDetails = (event) => {
   orderData.grandTotal = grandTotal;
 
   console.log(orderData);
-  
-  
+  exitCheckoutModal();
+  doneToast();
+
   // Prince needs this data
 
- fetch("/path-to-your-backend-script.php", {
-   method: "POST",
-   headers: {
-     "Content-Type": "application/json",
-   },
-   body: JSON.stringify(orderData), // Send orderData as JSON
- })
-   .then((response) => response.json())
-   .then((data) => {
-     console.log("Success:", data); // Handle response data if necessary
-   })
-   .catch((error) => {
-     console.error("Error:", error);
-   });
+  fetch("/path-to-your-backend-script.php", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(orderData), // Send orderData as JSON
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("Success:", data); // Handle response data if necessary
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
 };

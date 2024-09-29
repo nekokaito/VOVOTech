@@ -413,6 +413,6 @@ footer p {
   100% {
     transform: translateX(
       calc(-250px * 7)
-    ); /* Total width of one set of slides */
+    ); 
   }
 }
