@@ -1,6 +1,6 @@
 // Main Data Fetching from Back-End
 
-fetch("/data/data.json") // PHP data will be fetch from here <-------- Kaitoooooo >w<
+fetch("./data/data.json") // PHP data will be fetch from here <-------- Kaitoooooo >w<
   .then((response) => response.json())
   .then((data) => {
     cardData(data);
