@@ -1,8 +1,8 @@
-// Main Data Fetching from Back-End
+// Data Fetching 
 
 fetch(
   "https://raw.githubusercontent.com/nekokaito/VOVOTech/refs/heads/main/data/data.json"
-) // PHP data will be fetch from here <-------- Kaitoooooo >w<
+) 
   .then((response) => response.json())
   .then((data) => {
     cardData(data);
