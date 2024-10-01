@@ -1,4 +1,5 @@
 .toast {
+  font-family: "Titillium Web", sans-serif;
   visibility: hidden;
   max-width: 50px;
   height: 50px;
@@ -14,8 +15,7 @@
   right: 0;
   bottom: 30px;
   font-size: 17px;
-  white-space: nowrap; 
-
+  white-space: nowrap;
 }
 
 .toast .img {
@@ -34,13 +34,13 @@
 }
 
 .toast .img img {
-  width: 50%; 
-  height: auto; 
+  width: 50%;
+  height: auto;
 }
 
 .toast .desc {
   color: #fff;
-  padding: 16px;
+  padding: 11px;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -52,7 +52,6 @@
   animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 4s,
     fadeout 0.5s 4.5s;
 }
-
 
 @-webkit-keyframes fadein {
   from {
