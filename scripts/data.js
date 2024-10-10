@@ -1,8 +1,6 @@
-// Data Fetching 
+// Data Fetching
 
-fetch(
-  "https://raw.githubusercontent.com/nekokaito/VOVOTech/refs/heads/main/data/data.json"
-) 
+fetch("/VOVOTech/data/data.json")
   .then((response) => response.json())
   .then((data) => {
     cardData(data);

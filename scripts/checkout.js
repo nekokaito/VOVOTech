@@ -50,23 +50,23 @@ const checkoutDetails = (event) => {
   orderData.grandTotal = grandTotal;
 
   console.log(orderData);
-  exitCheckoutModal();
-  doneToast();
 
-  // Prince needs this data ...... O Meri Khuda..... 
+  // Prince needs this data ...... O Meri Khuda.....
 
-  fetch("/path-to-your-backend-script.php", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
+  $.ajax({
+    url: "insert.php",
+    type: "POST",
+    contentType: "application/json",
+    data: JSON.stringify(orderData),
+    dataType: "json",
+    success: function (response) {
+      $("#response").html("Success: " + response.message);
+      exitCheckoutModal();
+      openSuccessModal();
+      console.log("Working AJAX");
     },
-    body: JSON.stringify(orderData), 
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log("Success:", data);
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-    });
+    error: function (xhr) {
+      $("#response").html("Error: " + xhr.responseText);
+    },
+  });
 };
