@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="Cache-control" content="no-cache">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="icon" href="./images/logo/vovo.png"/>
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="./styles/responsive.css">
     <link rel="stylesheet" href="./styles/toast.css">
     <link rel="stylesheet" href="./styles/checkout.css">
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>VOVO Tech</title>
   </head>
   <body>
@@ -186,7 +188,25 @@
 
 </div>
 
-
+<dialog id="my_modal_2" class="modal hidden">
+                  <div id="modal-box-1" class="modal-box">
+                    <div class="success-modal">
+                      <img src="images/success.png" alt="" />
+                      <h3 class="">SUCCESS</h3>
+                      <h5 class="">
+                        Thank you for booking out seats. We are working hard to
+                        find best service and deals for you
+                      </h5>
+                      <p>Shortly you will find a confirmation in your email.</p>
+                      <button
+                        class=""
+                      >
+                        <a onclick="dialogClose()" href="">Continue</a>
+                      </button>
+                    </div>
+                  </div>
+                 
+                </dialog>
 
 
 
